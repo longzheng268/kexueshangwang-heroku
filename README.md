@@ -248,10 +248,15 @@ cloudflare worker ip 配置
 
 注册并登录CloudFlare账号
 点击Workers，点击“Create Service”按钮
+![image](https://user-images.githubusercontent.com/38132402/182290828-5927b2f5-be64-4565-abb5-53ab50c7aba2.png)
 
 输入自己想要的名称，其他默认，点击“Create Service”按钮
+![image](https://user-images.githubusercontent.com/38132402/182290887-24a2a83d-8029-4254-90c3-3a6a76cc1d23.png)
+
 
 点击“Quick Edit”
+![image](https://user-images.githubusercontent.com/38132402/182290907-36918396-61d3-46ae-b2ac-8e2b8f3be385.png)
+
 
 复制以下代码，粘贴到Worker中
 单账号
@@ -289,8 +294,12 @@ addEventListener(
     }
 )
 点击“Save and deploy”，点击“Send”按钮
-出现200OK即为成功反代
+出现200OK即为成功反代![image](https://user-images.githubusercontent.com/38132402/182290922-60c7be7d-4252-4153-bbbb-f16bf15e7aca.png)
+
+
 
 转到V2rayN，设置一个服务器，如图所示
+![image](https://user-images.githubusercontent.com/38132402/182290933-3fb2499d-4dc5-41f2-8c21-b17614821876.png)
+
 
 设置完成
