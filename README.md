@@ -245,3 +245,52 @@ https://github.com/badafans/better-cloudflare-ip
 cloudflare worker ip 配置
 
 ![v2rayN1](/readme-data/V2rayN1.jpg)
+
+注册并登录CloudFlare账号
+点击Workers，点击“Create Service”按钮
+
+输入自己想要的名称，其他默认，点击“Create Service”按钮
+
+点击“Quick Edit”
+
+复制以下代码，粘贴到Worker中
+单账号
+
+addEventListener(
+    "fetch",event => {
+        let url=new URL(event.request.url);
+        url.hostname="appname.herokuapp.com";
+        let request=new Request(url,event.request);
+        event. respondWith(
+            fetch(request)
+        )
+    }
+)
+双账号
+
+const SingleDay = 'app0.herokuapp.com'
+const DoubleDay = 'app1.herokuapp.com'
+addEventListener(
+    "fetch",event => {
+    
+        let nd = new Date();
+        if (nd.getDate()%2) {
+            host = SingleDay
+        } else {
+            host = DoubleDay
+        }
+        
+        let url=new URL(event.request.url);
+        url.hostname=host;
+        let request=new Request(url,event.request);
+        event. respondWith(
+            fetch(request)
+        )
+    }
+)
+点击“Save and deploy”，点击“Send”按钮
+出现200OK即为成功反代
+
+转到V2rayN，设置一个服务器，如图所示
+
+设置完成
