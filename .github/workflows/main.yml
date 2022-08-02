@@ -11,7 +11,7 @@ on:
         description: "us 或者 eu. 如果你的app已经创建，切换到不同的region，需要先输入 actions 为 destroy 删除app"
         default: "us"
         required: false
-      heroku-app-name: kexueshangwang
+      heroku-app-name: "kexueshangwang"
         description: "可选，如果输入，则会覆盖 Secrets 里面配置的 APP_NAME。"
         default: ""
         required: false
